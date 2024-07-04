@@ -56,7 +56,7 @@ df = df.query('LOCAL_YEAR <= @year_max')
 with st.sidebar:
     season = st.selectbox(
     "Select a season",
-    ("All", "WINTER", "SPRING", "SUMMER","AUTUMN"))
+    ("All", "WINTER", "SPRING", "SUMMER","FALL"))
 
     month = st.selectbox(
     "Select a month if no season is selected",
