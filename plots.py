@@ -1,12 +1,8 @@
-
-import streamlit as st
-import pandas as pd
 import numpy as np
-import sys
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-sys.path.append("d://PhD_projects//WindSpreedsheats")
+# sys.path.append("d://PhD_projects//WindSpreedsheats")
 
 
 def wind_rose_diagram(wind_direction,web=False):
