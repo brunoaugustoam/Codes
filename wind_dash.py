@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import os
-# import matplotlib.pyplot as plt
-from scipy.stats import mode
 import mplstereonet
 
 # sys.path.append("d://PhD_projects//Codes//WindSpreedsheats")
