@@ -1,9 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-
-# sys.path.append("d://PhD_projects//WindSpreedsheats")
-
+from scipy import stats
 
 def wind_rose_diagram(wind_direction,web=False):
 
@@ -33,9 +31,7 @@ def wind_speed_density(wind_direction,wind_speed,web=False):
 
     # To plot a regular Stereogram of wind, uncomment below 
     ax = fig.add_subplot(111, projection='stereonet')
-    # ax.pole(wind_direction-90, wind_speed, c='k', label='Pole of the Planes')
     ax.density_contourf(wind_direction-90, wind_speed, measurement='poles', cmap='Reds')
-
     ax.grid()
 
     if web:
@@ -48,7 +44,7 @@ def wind_speed_density(wind_direction,wind_speed,web=False):
 def get_pairplot(df, columns,hue='SEASON',palette= {'WINTER': 'C0', 'SPRING': 'C2', 'SUMMER': 'r', 'FALL': 'C1'}):
     return sns.pairplot(df[columns], hue=hue, palette=palette, markers=["o", "^", "H","D"], plot_kws={'alpha': 0.6})
 
-from scipy import stats
+
 def plot_wind_hist(wind_direction, wind_speed,web=False):
     fig, ax = plt.subplots(1,2,figsize=(8,5) ,)
     bin_edges = np.arange(-5, 366, 10)
@@ -59,7 +55,7 @@ def plot_wind_hist(wind_direction, wind_speed,web=False):
     mu = np.round(np.mean(wind_direction),1)
     md = np.round(np.median(wind_direction),1)
     std = np.round(np.std(wind_direction),1)
-    m = np.round(stats.mode(wind_direction),1)[0][0]
+    m = np.round(stats.mode(wind_direction),1)[0].item()
     ax[0].title.set_text(f'Mode: {m}, Mean: {mu}, Median: {md}, Std: {std}')
 
     bin_edges = np.arange( wind_speed.min(), wind_speed.max(), 2)
@@ -69,7 +65,7 @@ def plot_wind_hist(wind_direction, wind_speed,web=False):
     mu = np.round(np.mean(wind_speed),1)
     md = np.round(np.median(wind_speed),1)
     std = np.round(np.std(wind_speed),1)
-    m = np.round(stats.mode(wind_speed),1)[0][0]
+    m = np.round(stats.mode(wind_speed),1)[0].item()
     ax[1].title.set_text(f'Mode: {m}, Mean: {mu}, Median: {md}, Std: {std}')
 
     if web:
