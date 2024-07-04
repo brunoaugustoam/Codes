@@ -2,13 +2,11 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import os
-import sys
 import matplotlib.pyplot as plt
 from scipy.stats import mode
-from collections import OrderedDict
 import mplstereonet
 
-sys.path.append("d://PhD_projects//Codes//WindSpreedsheats")
+# sys.path.append("d://PhD_projects//Codes//WindSpreedsheats")
 from plots import *
 from utils import *
 
@@ -17,7 +15,8 @@ st.set_page_config(layout='wide')
 
 #Afterwards, save one single df with every year possible and skip this step
 # #List files
-root = "d://PhD_projects//Codes//WindSpreedsheats//Aggregate"
+# root = "d://PhD_projects//Codes//WindSpreedsheats//Aggregate"
+root = "Codes//WindSpreedsheats//Aggregate"
 files = os.listdir(root)
 files = [f for f in files if f.split('.')[-1] == 'csv']
 
