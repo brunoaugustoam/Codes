@@ -9,8 +9,8 @@ from utils import *
 #Strealit layout config
 st.set_page_config(layout='wide')
 
-root = "Codes//WindSpreedsheats//Aggregate"
-files = os.listdir(root)
+root = os.getcwd() #"Codes//WindSpreedsheats//Aggregate"
+files = os.listdir(os.path.join(root, 'WindSpreedsheats','Aggregate'))
 files = [f for f in files if f.split('.')[-1] == 'csv']
 
 # Concatenate df from different years
