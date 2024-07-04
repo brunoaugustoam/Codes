@@ -9,14 +9,15 @@ from utils import *
 #Strealit layout config
 st.set_page_config(layout='wide')
 
-root = os.getcwd() #"Codes//WindSpreedsheats//Aggregate"
-files = os.listdir(os.path.join(root, 'WindSpreedsheats','Aggregate'))
+root = os.getcwd() 
+data_path = os.path.join(root, 'WindSpreedsheats','Aggregate')
+files = os.listdir(data_path)
 files = [f for f in files if f.split('.')[-1] == 'csv']
 
 # Concatenate df from different years
-df = pd.read_csv(os.path.join(root, files[0]))
+df = pd.read_csv(os.path.join(data_path, files[0]))
 for f in files[1:]:
-     sample = pd.read_csv(os.path.join(root, f))
+     sample = pd.read_csv(os.path.join(data_path, f))
      df = pd.concat([df,sample])
 df.reset_index(inplace=True, drop=True)
 
