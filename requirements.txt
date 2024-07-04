@@ -2,6 +2,6 @@ streamlit
 pandas
 numpy
 os
-matplotlib.pyplot
+matplotlib == 3.5.3
 scipy.stats
 mplstereonet
