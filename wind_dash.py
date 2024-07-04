@@ -3,17 +3,12 @@ import pandas as pd
 import numpy as np
 import os
 import mplstereonet
-
-# sys.path.append("d://PhD_projects//Codes//WindSpreedsheats")
 from plots import *
 from utils import *
 
 #Strealit layout config
 st.set_page_config(layout='wide')
 
-#Afterwards, save one single df with every year possible and skip this step
-# #List files
-# root = "d://PhD_projects//Codes//WindSpreedsheats//Aggregate"
 root = "Codes//WindSpreedsheats//Aggregate"
 files = os.listdir(root)
 files = [f for f in files if f.split('.')[-1] == 'csv']
