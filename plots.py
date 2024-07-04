@@ -112,7 +112,7 @@ def plot_humidity(df,col=[ 'MIN_REL_HUMIDITY','MAX_REL_HUMIDITY'],web=False):
     else:
         plt.show()
 
-import plotly.figure_factory as ff
+# import plotly.figure_factory as ff
 def plot_temperature(dataframe, temperature=['MIN_TEMPERATURE','MEAN_TEMPERATURE', 'MAX_TEMPERATURE'], web=False):
     #fig, ax = plt.subplots(1, len(temperature), figsize=(8, 5), sharey=True)
     df = dataframe.copy()
