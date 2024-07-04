@@ -4,4 +4,5 @@ matplotlib
 scipy
 mplstereonet
 seaborn
+plotly
 streamlit
