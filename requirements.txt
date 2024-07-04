@@ -1,7 +1,6 @@
 pandas
 numpy
-os
 matplotlib
-scipy.stats
-
+scipy
+mplstereonet
 streamlit
