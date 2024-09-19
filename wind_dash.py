@@ -99,7 +99,7 @@ col1, col2 = st.columns(2)
 st.info('The direction (true or geographic, not magnetic) from which the wind blows. '
         'It represents the average direction during the two minute period ending at the time of observation.' 
         'Expressed in tens of degrees (10s deg), 9 means 90 degrees true or an east wind, and 36 means 360 degrees true' 
-    'or a wind blowing from the geographic North Pole. A value of zero (0) denotes a calm wind', icon="ℹ️")
+    'or a wind blowing from the geographic North Pole. This value is only reported if the maximum gust speed for the day exceeds 29 km/h. A value of zero (0) denotes a calm wind', icon="ℹ️")
 
 st.info('The speed of motion of air in kilometres per hour (km/h) usually observed at 10 metres above the ground. '
         'It represents the average speed during the one-, two- or ten-minute period ending at the time of observation. ', icon='ℹ️')

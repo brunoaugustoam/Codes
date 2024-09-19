@@ -18,7 +18,7 @@ def wind_rose_diagram(wind_direction,web=False):
        ax.set_theta_direction(-1)
        ax.set_thetagrids(np.arange(0, 360, 10), labels=np.arange(0, 360, 10))
        ax.set_rgrids(np.arange(0, number_of_strikes[:-1].max() + 10, ((number_of_strikes[:-1].max() // 5 )//10 + 1)*10), angle=0, weight= 'black')
-       ax.set_title(f'Rose Diagram of Wind Direction', y=1.10, fontsize=12)
+       #    ax.set_title(f'Rose Diagram of Wind Direction', y=1.10, fontsize=12)
 
        if web:
               return fig
